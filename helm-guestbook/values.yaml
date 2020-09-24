@@ -9,6 +9,12 @@ image:
   tag: 0.1
   pullPolicy: IfNotPresent
 
+rollout:
+  replicaCount: 5
+  image:
+    repository: argoproj/rollouts-demo
+    tag: blue
+
 service:
   type: ClusterIP
   port: 80
