@@ -7,6 +7,6 @@ spec:
   - http:
       paths:
       - path: /testpath
-       backend:
-          serviceName: test
-          servicePort: 80
+      backend:
+        serviceName: test
+        servicePort: 80
