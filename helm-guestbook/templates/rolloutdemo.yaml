@@ -6,6 +6,15 @@ spec:
   replicas: {{ .Values.rollout.replicaCount }}
   strategy:
     canary:
+      canaryService: canary-service
+      stableService: stable-service
+      trafficRouting:
+        nginx:
+          stableIngress: primary-ingress  # required
+          annotationPrefix: customingress.nginx.ingress.kubernetes.io # optional
+          additionalIngressAnnotations:   # optional
+            canary-by-header: X-Canary
+            canary-by-header-value: iwantsit
       steps:
       - setWeight: 20
       - pause: {}
