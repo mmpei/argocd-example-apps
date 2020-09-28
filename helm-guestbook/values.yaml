@@ -6,14 +6,14 @@ replicaCount: 1
 
 image:
   repository: hub.c.163.com/commonwork/ks-guestbook-demo
-  tag: 0.1
+  tag: 0.2
   pullPolicy: IfNotPresent
 
 rollout:
   replicaCount: 5
   image:
     repository: argoproj/rollouts-demo
-    tag: yellow
+    tag: blue
 
 service:
   type: ClusterIP
