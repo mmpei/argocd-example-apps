@@ -10,3 +10,11 @@ spec:
         backend:
           serviceName: rollouts-demo
           servicePort: 80
+      - path: /canarypath
+        backend:
+          serviceName: canary-service
+          servicePort: 80
+      - path: /stablepath
+        backend:
+          serviceName: stable-service
+          servicePort: 80
