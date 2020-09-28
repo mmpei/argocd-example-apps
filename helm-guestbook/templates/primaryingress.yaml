@@ -8,5 +8,5 @@ spec:
       paths:
       - path: /testpath
         backend:
-          serviceName: test
+          serviceName: rollouts-demo
           servicePort: 80
