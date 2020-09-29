@@ -13,7 +13,7 @@ rollout:
   replicaCount: 5
   image:
     repository: argoproj/rollouts-demo
-    tag: blue
+    tag: yellow
 
 service:
   type: ClusterIP
